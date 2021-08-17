@@ -1,0 +1,32 @@
+ <!-- form handling -->
+ <form action="/api/customers" method="POST" id="add_customer">
+    <div class="new_customer">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" >
+        </div>
+        <div class="form-group">
+            <label for="vehiclename" class="text-light">Vehicle Name</label>
+            <input type="text" name="vehiclename" value="" >
+        </div>
+        <div class="form-group">
+            <label for="vehiclenumber" class="text-light">Vehicle Number</label>
+            <input type="text" name="vehiclenumber" value="" >
+        </div>
+        <div class="form-group">
+            <label for="entrydate" class="text-light">Entry Date</label>
+            <input type="date"  name="entrydate" value="" >
+        </div>
+
+        <div class="form-group">
+            <label for="exitdate" class="text-light">Exit Date</label>
+            <input type="date" name="exitdate" value="" >
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

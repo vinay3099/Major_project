@@ -1,0 +1,62 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All customers</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update customer</h2>
+            
+        </div>
+
+        <!-- add customer form -->
+         <!-- form handling -->
+ <form method="POST" id="update_customer">
+    <div class="new_customer">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= customer._id %>">
+            <input type="text" name="name" value="<%= customer.name %>" >
+        </div>
+        <div class="form-group">
+            <label for="vehiclename" class="text-light">Vehicle Name</label>
+            <input type="text" name="vehiclename" value="<%= customer.vehiclename%>">
+        </div>
+        <div class="form-group">
+            <label for="vehiclenumber" class="text-light">Vehicle Number</label>
+            <input type="text" name="vehiclenumber" value="<%= customer.vehiclenumber%>">
+        </div>
+        
+        <div class="form-group">
+            <label for="entrydate" class="text-light">Entry Date</label>
+            <input type="date"  name="entrydate" value="<%= customer.entrydate%>">
+        </div>
+
+        <div class="form-group">
+            <label for="exitdate" class="text-light">Exit Date</label>
+            <input type="date" name="exitdate" value="<%= customer.exitdate%>" >
+        </div>
+        
+       
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

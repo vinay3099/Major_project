@@ -1,0 +1,18 @@
+<% for(var i = 0; i < customers.length; i++) { %>
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= customers[i].name %></td>
+    <td><%= customers[i].vehiclename %></td>
+    <td><%= customers[i].vehiclenumber %></td>
+    <td><%=customers[i].entrydate %></td>
+    <td><%= customers[i].exitdate %></td>
+    <td>
+        <a href="/updatecustomer?id=<%= customers[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id=<%= customers[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>
